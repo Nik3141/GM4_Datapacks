@@ -1,0 +1,8 @@
+#wand
+execute if score @s gm4_slot_count matches 2 if score @s gm4_stack_size matches 1 if block ~ ~ ~ dropper{Items:[{Slot:0b,id:"minecraft:flint",tag:{gm4_wand_tip:1b}},{Slot:3b,id:"minecraft:blaze_rod",tag:{gm4_resonant_core:1b}}]} run data merge block ~ ~ ~ {Items:[{Slot:8,id:"carrot_on_a_stick",Count:1b,tag:{gm4_wand:1b,gm4_custom_crafters:{multiplier:1},display:{Name:"{\"text\":\"Wand\",\"color\":\"dark_purple\"}",Lore:["{\"text\":\"Wave me\",\"color\":\"dark_aqua\"}"]},Enchantments:[{}]}}]}
+
+#wand tip
+execute if score @s gm4_slot_count matches 5 if score @s gm4_stack_size matches ..64 if block ~ ~ ~ dropper{Items:[{Slot:1b,id:"minecraft:quartz"},{Slot:3b,id:"minecraft:quartz"},{Slot:4b,id:"minecraft:diamond"},{Slot:5b,id:"minecraft:quartz"},{Slot:7b,id:"minecraft:quartz"}]} run data merge block ~ ~ ~ {Items:[{Slot:8,id:"flint",Count:1b,tag:{gm4_wand_tip:1b,gm4_custom_crafters:{multiplier:1},display:{Name:"{\"text\":\"Wand Tip\",\"color\":\"dark_aqua\"}"},Enchantments:[{id:"minecraft:channeling",lvl:1}]}}]}
+
+#resonant core
+execute if score @s gm4_slot_count matches 9 if score @s gm4_stack_size matches ..64 if block ~ ~ ~ dropper{Items:[{Slot:0b,id:"minecraft:blaze_rod"},{Slot:1b,id:"minecraft:end_rod"},{Slot:2b,id:"minecraft:blaze_rod"},{Slot:3b,id:"minecraft:stick"},{Slot:4b,id:"minecraft:nether_star"},{Slot:5b,id:"minecraft:stick"},{Slot:6b,id:"minecraft:blaze_rod"},{Slot:7b,id:"minecraft:end_rod"},{Slot:8b,id:"minecraft:blaze_rod"}]} run data merge block ~ ~ ~ {Items:[{Slot:8,id:"blaze_rod",Count:1b,tag:{gm4_resonant_core:1b,gm4_custom_crafters:{multiplier:1},display:{Name:"{\"text\":\"Resonant Core\",\"color\":\"dark_aqua\"}",Lore:["{\"text\":\"It burns you...\",\"color\":\"dark_red\"}"]},Enchantments:[{}]}}]}

@@ -1,0 +1,37 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:carrot_on_a_stick",
+      "nbt": "{CustomModelData:256}"
+    },
+    "title": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "I have the power of magic and anime...",
+        {"translate": "advancement.gm4.wandistry.title"}
+      ]
+    },
+    "description": {
+      "translate": "%1$s%3427655$s",
+      "with": [
+        "Obtain a wand.",
+        {"translate": "advancement.gm4.wandistry.description"}
+      ],
+      "color": "gray"
+    }
+  },
+  "parent": "gm4:root",
+  "criteria": {
+    "wandistry": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+	"items": [
+	  {
+	    "item": "minecraft:carrot_on_a_stick",
+	    "nbt": "{gm4_wand:1b}"
+	  }
+	]
+      }
+    }
+  }
+}
