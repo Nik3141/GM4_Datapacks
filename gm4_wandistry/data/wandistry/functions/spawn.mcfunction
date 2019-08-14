@@ -1,0 +1,1 @@
+execute if score structure_height gm4_count matches 80.. if score snowy gm4_orbis_biome matches 1 run function tower_structures:spawn/snowy

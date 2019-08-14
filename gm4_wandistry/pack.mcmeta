@@ -1,0 +1,25 @@
+{
+  "pack":{
+    "pack_format":0,
+    "description":"A Gamemode 4 Module"
+  },
+  "module_name":"Wandistry",
+  "module_id":"wandistry",
+  "site_description":"Find an ancient altar and craft a magic wand!",
+  "site_categories":[],
+  "video_link":"YOUTUBE_VIDEO_URL",
+  "wiki_link":"WIKI_URL",
+  "required_modules":[
+    "orbis"
+  ],
+  "recommended_modules":[],
+  "credits":{
+    "Creator":[
+      ["Nik3141","https://www.youtube.com/channel/UCgKd6elt0L3w-d7ryLw-7HQ"]
+    ],
+    "Updated By":[
+      ["USERNAME","OPTIONAL_LINK"],
+      ["USERNAME","OPTIONAL_LINK"]
+    ]
+  }
+}

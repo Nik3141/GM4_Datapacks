@@ -1,0 +1,23 @@
+**Module** Wandistry
+
+**Main Feature** Adds a wand item which can be used to craft spells, which are added in expansion packs.
+
+**User Experience**
+ - To craft a wand, players need a wand tip and a resonant core.
+ - One resonant core can be found in an ancient temple, which is a new generated structure.
+ - A resonant core can also be crafted with a nether star, four blaze rods, two end rods, and two sticks:
+   B E B
+   S N S
+   B E B
+ - A wand tip is made of four quartz and a diamond.
+   - Q -
+   Q D Q
+   - Q -
+ -This wand can be used to cast spells by moving the wand up, down, left, and right, which come in the standard spells pack.
+
+**Demo Video:** 
+
+Yes, it looks better with a resource pack, but it works without it too I think.
+---------------------------------------------------------------------------------
+TODO:
+Remove extraneous functions
