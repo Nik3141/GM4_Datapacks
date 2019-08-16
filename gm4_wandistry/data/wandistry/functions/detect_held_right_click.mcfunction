@@ -21,6 +21,7 @@ execute store result score @s gm4_rotTwo run data get entity @s Rotation[1] 100
 execute as @s[tag=!gm4_spell_confirmed,scores={gm4_hold_timer=1..}] at @s run function wandistry:log_movements
 execute as @s[tag=gm4_casting_spell,scores={gm4_hold_timer=0}] at @s run function #wandistry:cast_spell
 execute as @s[tag=gm4_casting_spell,scores={gm4_hold_timer=0}] at @s run function wandistry:clear_logged_movements
+execute as @s[tag=gm4_casting_spell,scores={gm4_hold_timer=0}] run tag @s remove gm4_spell_confirmed
 execute as @s[tag=gm4_casting_spell,scores={gm4_hold_timer=0}] run tag @s remove gm4_casting_spell
 
 #remember values for next tick (here for continutity when not holding right click)
@@ -32,7 +33,8 @@ execute as @s[scores={gm4_regInput=1}] run scoreboard players operation @s gm4_l
 
 #function explanation:
 #when the player is right clicking, they will receive the gm4_casting_spell tag.
-#when their timer counts down, the tag is removed after all #wandistry:cast_spell functions are run
+#when their timer counts down, that tag as well as gm4_spell_confirmed is removed after all #wandistry:cast_spell functions are run
 
-#at the end of wandistry:log_movements, all functions tagged #wandistry:check_spells are run, which check for a successful match
-#if a match is confirmed they will tag the player gm4_spell_confirmed as well as a specific tag for that spell
+
+#in wandistry:log_movements, once the player stops moving all functions tagged #wandistry:check_spells (which check for successful matches) are run and the player is tagged gm4_spell_confirmed
+#if a match is confirmed they will tag the player with a specific tag for that spell

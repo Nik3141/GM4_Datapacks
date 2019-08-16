@@ -77,8 +77,5 @@ scoreboard players set timerTime gm4_parameter 10
 #this is used to prevent multiple inputs when the player only attempts to make one input
 scoreboard players set timeBeforeRegisteringNewInput gm4_parameter 2
 
-#enables the input for "not moving", set this to 0 to only allow directional inputs
-scoreboard players set timerEnabled gm4_parameter 0
-
 #disables the detection of diagonal movements when set to 0
 scoreboard players set detectDiagonals gm4_parameter 1
