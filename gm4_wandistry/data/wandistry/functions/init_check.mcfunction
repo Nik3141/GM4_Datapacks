@@ -65,10 +65,10 @@ scoreboard objectives add gm4_confDirect trigger
 scoreboard objectives add gm4_parameter dummy
 
 #Defines how fast you have to rotate for it to count as an input
-scoreboard players set speedRequired gm4_parameter 2400000
+scoreboard players set speedRequired gm4_parameter 1000000
 
 #Defines how far you can maximally move for it to count as not moving
-scoreboard players set maximalRotationWhenNotMoving gm4_parameter 1500000
+scoreboard players set maximalRotationWhenNotMoving gm4_parameter 900000
 
 #Defines how long you have to not move before it counts as an "input"
 scoreboard players set timerTime gm4_parameter 10
