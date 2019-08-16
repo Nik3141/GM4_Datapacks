@@ -56,12 +56,7 @@ execute if score @s gm4_distance <= maximalRotationWhenNotMoving gm4_parameter r
 #set timer to 0 if there was an input
 execute as @s[scores={gm4_input=1..}] run scoreboard players set @s gm4_timer 0
 #sets the gm4_regInput flag if the timer has reached the value for when "no movement" should be detected
-execute if score @s gm4_timer = gm4_timerTime gm4_parameter if score gm4_timerEnabled gm4_parameter matches 1 run scoreboard players set @s gm4_regInput 1
-
-#forceZero if gm4_forceZero has been set (it is automatically reset)
-execute as @s[scores={gm4_forceZero=1}] run scoreboard players set @s gm4_input 0
-execute as @s[scores={gm4_forceZero=1}] run scoreboard players set @s gm4_regInput 1
-scoreboard players set @a gm4_forceZero 0
+#execute if score @s gm4_timer = gm4_timerTime gm4_parameter if score gm4_timerEnabled gm4_parameter matches 1 run scoreboard players set @s gm4_regInput 1
 
 #confirms input to players who have the scoreboard 'gm4_confDirect' set to 1; can be changed with a trigger command
 execute as @s[scores={gm4_regInput=1,gm4_confDirect=1}] run function wandistry:show_direction_particles
@@ -72,13 +67,15 @@ execute as @s[scores={gm4_regInput=1}] run scoreboard players operation @s gm4_s
 execute as @s[scores={gm4_regInput=1}] run scoreboard players operation @s gm4_stepThree = @s gm4_stepFour
 execute as @s[scores={gm4_regInput=1}] run scoreboard players operation @s gm4_stepFour = @s gm4_input
 
+function #wandistry:check_spells
+
 #Do something if a chain of correct inputs has been made
 #for the input chain 'right, left, up, down' you can use this command
-execute as @s[scores={gm4_regInput=1}] if score @s gm4_stepOne = right gm4_constant if score @s gm4_stepTwo = left gm4_constant if score @s gm4_stepThree = up gm4_constant if score @s gm4_stepFour = down gm4_constant run say I activated skill one
+#execute as @s[scores={gm4_regInput=1}] if score @s gm4_stepOne = right gm4_constant if score @s gm4_stepTwo = left gm4_constant if score @s gm4_stepThree = up gm4_constant if score @s gm4_stepFour = down gm4_constant run say I activated skill one
 #for the input chain 'upLeft, upRight, downLeft, downRight' you can use this command (the gm4_parameter 'detectDiagonals' has to be 1 for this to be possible 
-execute as @s[scores={gm4_regInput=1}] if score @s gm4_stepOne = upLeft gm4_constant if score @s gm4_stepTwo = upRight gm4_constant if score @s gm4_stepThree = downLeft gm4_constant if score @s gm4_stepFour = downRight gm4_constant run say I activated skill two
+#execute as @s[scores={gm4_regInput=1}] if score @s gm4_stepOne = upLeft gm4_constant if score @s gm4_stepTwo = upRight gm4_constant if score @s gm4_stepThree = downLeft gm4_constant if score @s gm4_stepFour = downRight gm4_constant run say I activated skill two
 #for the input chain 'left, no movement, left, left' you can use this command (the gm4_parameter 'detectDiagonals' has to be 1 for this to be possible 
-execute as @s[scores={gm4_regInput=1}] if score @s gm4_stepOne = left gm4_constant if score @s gm4_stepTwo = left gm4_constant if score @s gm4_stepThree = left gm4_constant if score @s gm4_stepFour = left gm4_constant run say I activated skill three
+#execute as @s[scores={gm4_regInput=1}] if score @s gm4_stepOne = left gm4_constant if score @s gm4_stepTwo = left gm4_constant if score @s gm4_stepThree = left gm4_constant if score @s gm4_stepFour = left gm4_constant run say I activated skill three
 #To make shorter input chains you would only use the last few steps, ignoring step one.
 #This command would be for 'right, right'
-execute as @s[scores={gm4_regInput=1}] if score @s gm4_stepThree = right gm4_constant if score @s gm4_stepFour = right gm4_constant run say I activated skill four
+#execute as @s[scores={gm4_regInput=1}] if score @s gm4_stepThree = right gm4_constant if score @s gm4_stepFour = right gm4_constant run say I activated skill four

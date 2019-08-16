@@ -57,9 +57,6 @@ scoreboard players set left gm4_constant 6
 scoreboard players set upLeft gm4_constant 7
 scoreboard players set downLeft gm4_constant 8
 
-#forces 0 as input, can be used together with timerEnabled=0 to break a chain of inputs
-scoreboard objectives add gm4_forceZero dummy
-
 #A trigger scoreboard objective that can be set to 1, or 0 by each individual player, 
 #defaults to 0, confirms inputs in chat for players where it is set to 1
 scoreboard objectives add gm4_confDirect trigger
@@ -70,7 +67,7 @@ scoreboard objectives add gm4_parameter dummy
 #Defines how fast you have to rotate for it to count as an input
 scoreboard players set speedRequired gm4_parameter 2500000
 
-#Defines how fast you can maximaly move before it counts as not moving
+#Defines how fast you can maximally move before it counts as not moving
 scoreboard players set maximalRotationWhenNotMoving gm4_parameter 1500000
 
 #Defines how long you have to not move before it counts as an "input"

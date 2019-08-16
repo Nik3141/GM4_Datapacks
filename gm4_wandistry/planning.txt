@@ -20,4 +20,25 @@
 Yes, it looks better with a resource pack, but it works without it too I think.
 ---------------------------------------------------------------------------------
 TODO:
-Remove extraneous functions
+Make wand more sensitive.
+Make wand run test tagged functions.
+Make wand more efficient by removing extraneous code in log_movements and init_check.
+---------------------------------------------------------------------------------
+
+Spell Packs:
+Standard Spells
+  -
+  -
+Advanced Defensive Magic
+  -Proteo Spiculum
+  -Relashio
+  -Divinio
+  -Obscura Nebulus
+
+
+Living Statues
+  -Adds animation stones
+    - Fire
+    - Earth
+    - 
+  -Animatus
