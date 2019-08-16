@@ -64,7 +64,7 @@ scoreboard objectives add gm4_forceZero dummy
 #defaults to 0, confirms inputs in chat for players where it is set to 1
 scoreboard objectives add gm4_confDirect trigger
 
-#add parameters, these change how the main function operates
+#add parameters, these change how the log_movements function operates
 scoreboard objectives add gm4_parameter dummy
 
 #Defines how fast you have to rotate for it to count as an input
@@ -74,7 +74,7 @@ scoreboard players set speedRequired gm4_parameter 2500000
 scoreboard players set maximalRotationWhenNotMoving gm4_parameter 1500000
 
 #Defines how long you have to not move before it counts as an "input"
-scoreboard players set timerTime gm4_parameter 50
+scoreboard players set timerTime gm4_parameter 10
 
 #Defines how long you have to not move before you can make a new input
 #this is used to prevent multiple inputs when the player only attempts to make one input
@@ -84,4 +84,4 @@ scoreboard players set timeBeforeRegisteringNewInput gm4_parameter 2
 scoreboard players set timerEnabled gm4_parameter 0
 
 #disables the detection of diagonal movements when set to 0
-scoreboard players set detectDiagonals gm4_parameter 0
+scoreboard players set detectDiagonals gm4_parameter 1
