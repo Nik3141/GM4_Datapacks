@@ -38,7 +38,7 @@ scoreboard objectives add gm4_input dummy
 #and to detect if a player doesn't move for a while
 scoreboard objectives add gm4_timer dummy
 
-#use these to remember previous inputs, add as many as you need
+#use these to remember previous inputs
 scoreboard objectives add gm4_stepOne dummy
 scoreboard objectives add gm4_stepTwo dummy
 scoreboard objectives add gm4_stepThree dummy
@@ -65,9 +65,9 @@ scoreboard objectives add gm4_confDirect trigger
 scoreboard objectives add gm4_parameter dummy
 
 #Defines how fast you have to rotate for it to count as an input
-scoreboard players set speedRequired gm4_parameter 2500000
+scoreboard players set speedRequired gm4_parameter 2400000
 
-#Defines how fast you can maximally move before it counts as not moving
+#Defines how far you can maximally move for it to count as not moving
 scoreboard players set maximalRotationWhenNotMoving gm4_parameter 1500000
 
 #Defines how long you have to not move before it counts as an "input"
