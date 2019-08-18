@@ -1,0 +1,24 @@
+{
+  "pack":{
+    "pack_format":0,
+    "description":"A Gamemode 4 Module"
+  },
+  "module_name":"Zombie Stacking",
+  "module_id":"zombie_stacking",
+  "site_description":"Zombies congregating in an area will start forming zombie stacks.",
+  "site_categories":[],
+  "video_link":"YOUTUBE_VIDEO_URL",
+  "wiki_link":"WIKI_URL",
+  "required_modules":[],
+  "recommended_modules":[],
+  "credits":{
+    "comment":"Credit to TinyAtoms for the idea.",
+    "Creator":[
+      ["Nik3141","https://www.youtube.com/channel/UCgKd6elt0L3w-d7ryLw-7HQ"]
+    ],
+    "Updated By":[
+      ["USERNAME","OPTIONAL_LINK"],
+      ["USERNAME","OPTIONAL_LINK"]
+    ]
+  }
+}
