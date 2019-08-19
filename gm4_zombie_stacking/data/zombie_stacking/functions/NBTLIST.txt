@@ -13,7 +13,6 @@ NoAI
 CustomName
 
 -----Transfered NBT-----
-id
 Fire
 Air
 Silent
@@ -33,5 +32,3 @@ PersistenceRequired
 LeftHanded
 IsBaby
 CanBreakDoors
-DrownedConversionTime
-InWaterTime
