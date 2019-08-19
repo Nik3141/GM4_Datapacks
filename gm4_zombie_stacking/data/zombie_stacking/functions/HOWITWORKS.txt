@@ -1,0 +1,79 @@
+This is just a planning document
+Feel free to delete it
+or not if you think it'll help with maintenance
+idc
+
+how this thing is gonna work:
+any zombie that is within 60 blocks of a player is eligible to stack
+zombies stack with other zombies or stacks within 0.5 blocks of themselves
+out of the zombies that can stack, one,
+starting with the closest to the player, stacks every 16 ticks
+NoAI zombies are not stacked, as well as some others mentioned in NBTLIST.txt
+NBT which is transfered is listed in NBTLIST.txt
+a stack can have at max 5 zombies
+
+note:
+the bigger stack of zombies will be tagged as gm4_zombie_stack_base
+the smaller stack of zombies will be tagged as gm4_zombie_stack_addition
+all stacks of zombies, when created, will have a gm4_stack_size_x tag
+
+cases:
+1x1
+one of the zombies will be tagged as gm4_zombie_stack_base
+the other will be tagged as gm4_zombie_stack_addition
+a new zombie will be spawned with a single zombie passenger.
+The base zombie will get NBT copied from the base
+the riding zombie will get NBT copied from the addition
+both original zombies are tp'd under the bedrock to eliminate mess
+
+2x1
+the two stack will be tagged as gm4_zombie_stack_base
+the one stack will be tagged as gm4_zombie_stack_addition
+a new zombie will be spawned with a zombie riding it with a zombie riding that zombie
+the base zombie will have NBT copied over from the base
+the middle zombie will have NBT copied over from the base's rider
+the top zombie will have NBT copied over from the addition
+original zombie and zombie stack are tp'd beneath the bedrock to eliminate mess
+
+2x2
+one stack will be tagged as gm4_zombie_stack_base
+the other stack will be tagged as gm4_zombie_stack_addition
+a new zombie will be spawned with a zombie riding it with a zombie riding that zombie with a zombie riding it
+confused yet? it gets worse
+the base zombie will have NBT copied over from the base
+the next zombie will have NBT copied over from the base's rider
+the next zombie will have NBT copied over from the addition
+the top zombie will have NBT copied over from the addition's rider
+both original zombie stacks are tp'd beneath the bedrock to eliminate mess
+
+3x1
+the three stack will be tagged as gm4_zombie_stack_base
+the other zombie will be tagged as gm4_zombie_stack_addition
+a new zombie will be spawned with a zombie riding it with a zombie riding that zombie with a zombie riding it
+the base zombie will have NBT copied over from the base
+the next zombie will have NBT copied over from the base's rider
+the next zombie will have NBT copied over from the base's rider's rider
+the top zombie will have NBT copied over from the addition
+original zombie and zombie stack are tp'd beneath the bedrock to eliminate mess
+
+3x2
+the three stack will be tagged as gm4_zombie_stack_base
+the other stack will be tagged as gm4_zombie_stack_addition
+a new zombie will be spawned with a zombie riding it with a zombie riding that zombie with a zombie riding it with another zombie on top
+the base zombie will have NBT copied over from the base
+the next zombie will have NBT copied over from the base's rider
+the middle zombie will have NBT copied over form the base's rider's rider
+the next zombie will have NBT copied over from the addition
+the top zombie will have NBT copied over from the addition's rider
+both original zombie stacks are tp'd beneath the bedrock to eliminate mess
+
+4x1
+the four stack will be tagged as gm4_zombie_stack_base
+the other zombie will be tagged as gm4_zombie_stack_addition
+a new zombie will be spawned with a zombie riding it with a zombie riding that zombie with a zombie riding it with another zombie on top
+the base zombie will have NBT copied over from the base
+the next zombie will have NBT copied over from the base's rider
+the middle zombie will have NBT copied over form the base's rider's rider
+the next zombie will have NBT copied over form the base's rider's rider's rider
+the top zombie will have NBT copied over from the addition
+original zombie and zombie stack are tp'd beneath the bedrock to eliminate mess
