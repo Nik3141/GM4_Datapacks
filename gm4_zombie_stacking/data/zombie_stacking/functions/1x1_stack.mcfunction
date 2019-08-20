@@ -1,6 +1,8 @@
 #@s refers to a zombie which is stacking eligible and next to another stacking eligible zombie
 #run from zombie_stacking:main
 
+say 1x1_stack
+
 #add tag to transfer NBT
 tag @e[type=zombie,distance=0.00001..1,tag=!gm4_stack_base,tag=!gm4_stack_rider,tag=!gm4_addition,limit=1] add gm4_addition
 
@@ -56,10 +58,14 @@ tag @e[tag=gm4_new_base,distance=..1,limit=1] add gm4_stack_base
 tag @e[tag=gm4_new_rider_1,distance=..1,limit=1] add gm4_stack_rider_1
 tag @e[tag=gm4_new_rider_1,distance=..1,limit=1] add gm4_stack_rider
 
-#remove temporary tags
+#remove temporary tags and gm4_addition tags
+tag @e[tag=gm4_new_base,distance=..1,limit=1] remove gm4_addition
+tag @e[tag=gm4_new_rider_1,distance=..1,limit=1] remove gm4_addition
+
 tag @e[tag=gm4_new_base,distance=..1,limit=1] remove gm4_new_base
 tag @e[tag=gm4_new_rider_1,distance=..1,limit=1] remove gm4_new_rider_1
 
 #tp zombies below bedrock
+#tping them up for now so I can see what happens...for some reason multiple zombie stacks spawn
 tp @e[tag=gm4_addition,distance=..1,limit=1] ~5 90 ~5
 tp @s ~-5 90 ~-5

@@ -1,6 +1,8 @@
 #@s refers to all players
 #run as @a at @s from pulse_check
 
+say main
+
 #-----
 #for reference:
 #checks for Passengers, CustomName, NoGravity, Invulnerable, and NoAI
@@ -25,6 +27,9 @@
 #gm4_stack_rider_x is a rider of the new stack
 #gm4_stack_rider is a rider of the new stack
 #-----
+
+#THE MAIN (see what I did there) PROBLEM IS THAT EACH OF A PAIR OF ZOMBIES WILL TRY TO RUN THE STACKING FUNCTION, AND LIMITING IT TO ONE DOESN'T REALLY HELP ANYTHING
+#ADDITIONALLY, THE zombie_stacking:stackable TAG DOESN'T WORK CORRECTLY, SO ZOMBIES CAN PRETTY MUCH STACK ANYWHERE, EVEN IF THEY SHOULDN'T BE ABLE TO (ex: in small caves)
 
 #1x1
 execute as @e[type=zombie,distance=..60,tag=!gm4_stack_base,tag=!gm4_stack_rider,tag=!gm4_addition] unless data entity @s Passengers unless data entity @s CustomName unless entity @s[nbt={NoGravity:1b}] unless entity @s[nbt={Invulnerable:1b}] unless entity @s[nbt={NoAI:1b}] at @s as @e[type=zombie,distance=0.00001..1,tag=!gm4_stack_base,tag=!gm4_stack_rider,tag=!gm4_addition] unless data entity @s Passengers unless data entity @s CustomName unless entity @s[nbt={NoGravity:1b}] unless entity @s[nbt={Invulnerable:1b}] unless entity @s[nbt={NoAI:1b}] run function zombie_stacking:1x1_stack
