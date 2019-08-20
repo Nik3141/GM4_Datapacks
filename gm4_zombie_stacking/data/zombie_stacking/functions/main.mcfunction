@@ -27,7 +27,7 @@
 #-----
 
 #1x1
-execute as @e[type=zombie,distance=..60,tag=!gm4_stack_base,tag=!gm4_stack_rider] unless data entity @s Passengers unless data entity @s CustomName unless entity @s[nbt={NoGravity:1b}] unless entity @s[nbt={Invulnerable:1b}] unless entity @s[nbt={NoAI:1b}] at @s as @e[type=zombie,distance=0.00001..1,tag=!gm4_stack_base,tag=!gm4_stack_rider] unless data entity @s Passengers unless data entity @s CustomName unless entity @s[nbt={NoGravity:1b}] unless entity @s[nbt={Invulnerable:1b}] unless entity @s[nbt={NoAI:1b}] run function zombie_stacking:1x1_stack
+execute as @e[type=zombie,distance=..60,tag=!gm4_stack_base,tag=!gm4_stack_rider,tag=!gm4_addition] unless data entity @s Passengers unless data entity @s CustomName unless entity @s[nbt={NoGravity:1b}] unless entity @s[nbt={Invulnerable:1b}] unless entity @s[nbt={NoAI:1b}] at @s as @e[type=zombie,distance=0.00001..1,tag=!gm4_stack_base,tag=!gm4_stack_rider,tag=!gm4_addition] unless data entity @s Passengers unless data entity @s CustomName unless entity @s[nbt={NoGravity:1b}] unless entity @s[nbt={Invulnerable:1b}] unless entity @s[nbt={NoAI:1b}] run function zombie_stacking:1x1_stack
 
 #2x1
 

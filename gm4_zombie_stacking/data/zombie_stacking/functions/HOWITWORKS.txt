@@ -6,8 +6,37 @@ any zombie that is within 60 blocks of a player is eligible to stack
 zombies stack with other zombies or stacks within 0.5 blocks of themselves
 out of the zombies that can stack, one,
 starting with the closest to the player, stacks every 16 ticks
-NoAI zombies are not stacked, as well as some others mentioned in NBTLIST.txt
-NBT which is transfered is listed in NBTLIST.txt
+NoAI zombies are not stacked, as well as some other NBT:
+-----Disqualification NBT-----
+---(These are only 1 if the zombie is not natural)---
+NoGravity
+Invulnerable
+NoAI
+
+---(This only exists if the zombie has been nametagged)---
+CustomName
+
+-----Transfered NBT-----
+Fire
+Air
+Silent
+Glowing
+Tags
+Health
+AbsorptionAmount
+Attributes
+ActiveEffects
+HandItems
+ArmorItems
+HandDropChances
+ArmorDropChances
+DeathLootTable
+DeathLootTableSeed
+PersistenceRequired
+LeftHanded
+IsBaby
+CanBreakDoors
+-----
 a stack can have at max 5 zombies
 
 note:

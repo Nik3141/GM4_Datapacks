@@ -7,7 +7,7 @@ say stack
 tag @e[type=zombie,distance=0.00001..1,tag=!gm4_stack_base,tag=!gm4_stack_rider,limit=1] add gm4_addition
 
 #summon new zombie stack
-summon zombie ~ ~ ~ {Tags:["gm4_new_base"],Passengers:[{id:"minecraft:zombie",Tags:["gm4_new_rider_1"]}]}
+summon zombie ~ ~0.5 ~ {Tags:["gm4_new_base"],Passengers:[{id:"minecraft:zombie",Tags:["gm4_new_rider_1"]}]}
 
 #transfer base nbt
 data modify entity @e[tag=gm4_new_base,distance=..0.1,limit=1] Fire set from entity @s Fire
@@ -63,5 +63,5 @@ tag @e[tag=gm4_new_base,distance=..0.1,limit=1] remove gm4_new_base
 tag @e[tag=gm4_new_rider_1,distance=..0.1,limit=1] remove gm4_new_rider_1
 
 #tp zombies below bedrock (I think more efficient than NBT modification as BPR suggested; correct me if I'm wrong)
-tp @e[tag=gm4_addition,distance=..0.1,limit=1] ~ -70 ~
-tp @s ~ -70 ~
+tp @e[tag=gm4_addition,distance=..0.1,limit=1] ~5 90 ~5
+tp @s ~-5 90 ~-5
